@@ -1,0 +1,200 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+
+  <!-- ImageView Header -->
+  <ImageView
+    android:id="@+id/imageViewHeader"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:src="@drawable/gestion"
+    android:layout_marginTop="25dp"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent" />
+
+  <!-- TextView Título -->
+  <TextView
+    android:id="@+id/textViewTitle1"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:text="Gestión de"
+    android:textSize="28sp"
+    android:textStyle="bold"
+    android:textColor="@color/white"
+    android:layout_marginTop="30dp"
+    android:layout_marginEnd="40dp"
+    app:layout_constraintTop_toTopOf="@id/imageViewHeader"
+    app:layout_constraintEnd_toEndOf="parent" />
+  <TextView
+    android:id="@+id/textViewTitle2"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:text="proyectos"
+    android:textSize="28sp"
+    android:textStyle="bold"
+    android:textColor="@color/white"
+    android:layout_marginEnd="40dp"
+    app:layout_constraintTop_toBottomOf="@+id/textViewTitle1"
+    app:layout_constraintEnd_toEndOf="parent" />
+  <!-- EditText ID (oculto) -->
+  <EditText
+    android:id="@+id/editTextId"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:hint="@string/hint_id"
+    android:enabled="false"
+    android:visibility="gone"
+    android:inputType="text"
+    android:layout_margin="30dp"
+    app:layout_constraintTop_toBottomOf="@id/textViewTitle2"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent" />
+  <!-- EditText Nombre -->
+  <EditText
+    android:id="@+id/editTextName"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:hint="@string/hint_name"
+    android:inputType="text"
+    android:backgroundTint="@color/white"
+    android:textColorHint="@color/white"
+    android:textColor="@color/white"
+    android:layout_marginStart="30dp"
+    android:layout_marginEnd="30dp"
+    app:layout_constraintTop_toBottomOf="@id/editTextId"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent" />
+  <!-- EditText Descripcion -->
+  <EditText
+    android:id="@+id/editTextDescripcion"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:hint="Descripción"
+    android:inputType="text"
+    android:backgroundTint="@color/white"
+    android:textColorHint="@color/white"
+    android:textColor="@color/white"
+    android:layout_marginStart="30dp"
+    android:layout_marginEnd="30dp"
+    app:layout_constraintTop_toBottomOf="@id/editTextName"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent" />
+  <!-- EditText Fechas -->
+  <EditText
+    android:id="@+id/editTextFechaIni"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:hint="Fecha de inicio"
+    android:inputType="text"
+    android:backgroundTint="@color/white"
+    android:textColorHint="@color/white"
+    android:textColor="@color/white"
+    android:layout_marginStart="30dp"
+    android:layout_marginEnd="30dp"
+    app:layout_constraintTop_toBottomOf="@id/editTextDescripcion"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent" />
+  <EditText
+    android:id="@+id/editTextFechaFin"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:hint="fecha finalización"
+    android:inputType="text"
+    android:backgroundTint="@color/white"
+    android:textColor="@color/white"
+    android:textColorHint="@color/white"
+    android:layout_marginStart="30dp"
+    android:layout_marginEnd="30dp"
+    app:layout_constraintTop_toBottomOf="@id/editTextFechaIni"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent" />
+  <!-- Button Agregar -->
+  <Button
+    android:id="@+id/buttonAdd"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:text="@string/button_add"
+    android:layout_marginStart="30dp"
+    android:layout_marginEnd="30dp"
+    android:backgroundTint="@color/white"
+    android:textColor="@color/blue"
+    android:textStyle="bold"
+    android:textSize="20dp"
+    app:layout_constraintTop_toBottomOf="@id/editTextFechaFin"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent" />
+  <!-- LinearLayout para 2 bootones horizontales -->
+  <LinearLayout
+    android:id="@+id/linearlayoutbuttons"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginStart="30dp"
+    android:layout_marginEnd="30dp"
+    app:layout_constraintTop_toBottomOf="@id/buttonAdd"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent">
+    <Button
+      android:id="@+id/buttonGetSqlite"
+      android:layout_width="175dp"
+      android:layout_height="wrap_content"
+      android:backgroundTint="@color/white"
+      android:textColor="@color/blue"
+      android:textStyle="bold"
+      android:textSize="20dp"
+      android:text="SQLite (local)" />
+    <Button
+      android:id="@+id/buttonGetFirebase"
+      android:layout_width="175dp"
+      android:layout_height="wrap_content"
+      android:backgroundTint="@color/white"
+      android:textColor="@color/blue"
+      android:textStyle="bold"
+      android:textSize="20dp"
+      android:text="Realtime " />
+  </LinearLayout>
+  <!-- LinearLayout para 2 bootones horizontales -->
+  <LinearLayout
+    android:id="@+id/linearlayoutbuttons2"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginStart="30dp"
+    android:layout_marginEnd="30dp"
+    app:layout_constraintTop_toBottomOf="@+id/linearlayoutbuttons"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent">
+    <!-- Button Sincronizar Firebase -->
+    <Button
+      android:id="@+id/buttonSichronized"
+      android:layout_width="175dp"
+      android:layout_height="wrap_content"
+      android:backgroundTint="@color/white"
+      android:textColor="@color/blue"
+      android:textStyle="bold"
+      android:textSize="20dp"
+      android:text="Sincronizar"/>
+    <Button
+      android:id="@+id/buttonBack"
+      android:layout_width="175dp"
+      android:layout_height="wrap_content"
+      android:backgroundTint="@color/green"
+      android:textColor="@color/white"
+      android:textStyle="bold"
+      android:textSize="20dp"
+      android:text="Lista general"/>
+  </LinearLayout>
+  <!-- ListView Proyectos -->
+  <ListView
+    android:id="@+id/listViewProducts"
+    android:layout_width="0dp"
+    android:layout_height="300dp"
+    android:layout_marginStart="30dp"
+    android:layout_marginEnd="30dp"
+    android:layout_marginTop="20dp"
+    app:layout_constraintTop_toBottomOf="@id/linearlayoutbuttons2"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

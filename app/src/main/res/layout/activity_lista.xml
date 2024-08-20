@@ -1,0 +1,124 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+
+  <!-- ImageView Header -->
+  <ImageView
+    android:id="@+id/imageViewHeader"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:src="@drawable/basegestion"
+    android:layout_marginTop="25dp"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent" />
+
+  <!-- TextView Título -->
+  <TextView
+    android:id="@+id/textViewTitle1"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:text="Lista de"
+    android:textSize="28sp"
+    android:textStyle="bold"
+    android:textColor="@color/white"
+    android:layout_marginTop="30dp"
+    android:layout_marginEnd="40dp"
+    app:layout_constraintTop_toTopOf="@id/imageViewHeader"
+    app:layout_constraintEnd_toEndOf="parent" />
+  <TextView
+    android:id="@+id/textViewTitle2"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:text="proyectos"
+    android:textSize="28sp"
+    android:textStyle="bold"
+    android:textColor="@color/white"
+    android:layout_marginEnd="40dp"
+    app:layout_constraintTop_toBottomOf="@+id/textViewTitle1"
+    app:layout_constraintEnd_toEndOf="parent" />
+
+  <!-- EditText ID -->
+  <EditText
+    android:id="@+id/editTextId"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:hint="@string/hint_id"
+    android:enabled="false"
+    android:visibility="gone"
+    android:inputType="text"
+    android:layout_margin="30dp"
+    app:layout_constraintTop_toBottomOf="@id/textViewTitle2"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent" />
+
+
+
+  <!-- Button Agregar -->
+
+
+  <!-- LinearLayout Botones -->
+  <LinearLayout
+
+
+    android:id="@+id/linearEspacio"
+    android:layout_width="0dp"
+    android:layout_height="60dp"
+    android:orientation="horizontal"
+    android:layout_marginStart="30dp"
+    android:layout_marginEnd="30dp"
+    app:layout_constraintTop_toBottomOf="@id/editTextId"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent">
+
+  </LinearLayout>
+
+  <LinearLayout
+    android:id="@+id/linearlayoutbuttons2"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginStart="30dp"
+    android:layout_marginEnd="30dp"
+    app:layout_constraintTop_toBottomOf="@+id/linearEspacio"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent">
+    <!-- Button Sincronizar Firebase -->
+    <Button
+      android:id="@+id/buttonAdd"
+      android:layout_width="175dp"
+      android:layout_height="wrap_content"
+      android:backgroundTint="@color/white"
+      android:textColor="@color/blue"
+      android:textStyle="bold"
+      android:textSize="20dp"
+      android:text="Gestionar"/>
+
+    <Button
+      android:id="@+id/buttonBack"
+      android:layout_width="175dp"
+      android:layout_height="wrap_content"
+      android:backgroundTint="@color/green"
+      android:text="Cerrar sesión"
+      android:textColor="@color/white"
+      android:textSize="20dp"
+      android:textStyle="bold" />
+
+  </LinearLayout>
+
+  <!-- ListView Products -->
+  <ListView
+    android:id="@+id/listViewProducts"
+    android:layout_width="0dp"
+    android:layout_height="300dp"
+    android:layout_marginStart="30dp"
+    android:layout_marginEnd="30dp"
+    android:layout_marginTop="20dp"
+    app:layout_constraintTop_toBottomOf="@id/linearlayoutbuttons2"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

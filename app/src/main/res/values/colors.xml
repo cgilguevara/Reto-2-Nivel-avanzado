@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <color name="black">#FF000000</color>
+  <color name="blackhint">#99000000</color>
+  <color name="white">#FFFFFFFF</color>
+  <color name="white_dark">#DFC0C0</color>
+  <color name="red">#F4052C</color>
+  <color name="blue">#093AEA</color>
+  <color name="btn_next">#093AEA</color>
+  <color name="btn_back">#FFFFFFFF</color>
+  <color name="white2">#EAD2D2</color>
+  <color name="transparencia">#80EAD2D2</color>
+  <color name="txttransparncia">#99EAD2D2</color>
+  <color name="green">#9907F111</color>
+
+</resources>
